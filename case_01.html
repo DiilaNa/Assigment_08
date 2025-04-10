@@ -27,9 +27,13 @@
    const updateLetters = () => {
        let LastLetter = data.pop();
        data.unshift(LastLetter);
-       for (let i = 0; i < data.length; i++) {
+      /* for (let i = 0; i < data.length; i++) {
            document.getElementsByTagName('div')[i].innerText = data[i];
-       }
+       }*/
+       data.map((item,index)=>{
+           document.getElementsByTagName('div')[index].innerText = item;
+       })
+
    }
    setInterval(updateLetters,1000);
 </script>
