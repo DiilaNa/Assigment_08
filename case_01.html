@@ -21,7 +21,18 @@
     <div>D</div>
     <div>E</div>
     <div>F</div>
+<script>
+   let data = ['A','B','C','D','E','F']
 
+   const updateLetters = () => {
+       let LastLetter = data.pop();
+       data.unshift(LastLetter);
+       for (let i = 0; i < data.length; i++) {
+           document.getElementsByTagName('div')[i].innerText = data[i];
+       }
+   }
+   setInterval(updateLetters,1000);
+</script>
 </section>
 </body>
 </html>
